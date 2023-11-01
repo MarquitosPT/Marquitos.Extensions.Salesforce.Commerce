@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Marquitos.Salesforce.Commerce</RootNamespace>
+		
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\..\tools\MarquitosPT.snk</AssemblyOriginatorKeyFile>
+		
+		<IsPackable>true</IsPackable>
+		<PackageId>Marquitos.Extensions.Salesforce.Commerce</PackageId>
+		<PackageTags>net framework extensions salesforce commerce</PackageTags>
+		<PackageProjectUrl>https://github.com/MarquitosPT/Marquitos.Extensions.Salesforce.Commerce</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/MarquitosPT/Marquitos.Extensions.Salesforce.Commerce</RepositoryUrl>
+
+		<Product>Marquitos Extensions for Salesforce Commerce</Product>
+		<Title>Marquitos Extensions for Salesforce Commerce</Title>
+		<Description>Extensions to create import/export models to Salesforce Commerce.</Description>
+		<Authors>Marcos Gomes</Authors>
+		<Copyright>Copyright © 2023 by MarquitosPT</Copyright>
+		<Owners>MarquitosPT</Owners>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
