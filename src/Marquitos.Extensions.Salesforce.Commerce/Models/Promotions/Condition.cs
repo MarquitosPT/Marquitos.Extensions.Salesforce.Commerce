@@ -9,7 +9,8 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
     [XmlInclude(typeof(AttributeCondition))]
     [XmlInclude(typeof(BrandCondition))]
     [XmlInclude(typeof(CategoryCondition))]
-    public abstract class Condition<TOperator>: Condition where TOperator : struct
+    [XmlInclude(typeof(ProductCondition))]
+    public abstract class Condition<TOperator>: Condition where TOperator : Enum
     {
         /// <summary>
         /// Creates a new instance of <see cref="Condition{TOperator}"/> with an empty operator.
