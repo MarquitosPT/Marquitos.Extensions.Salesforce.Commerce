@@ -78,6 +78,24 @@ namespace Marquitos.Salesforce.Commerce.Helpers
         }
 
         /// <summary>
+        /// Read from a xml string
+        /// </summary>
+        /// <typeparam name="T">Result type</typeparam>
+        /// <param name="xml">The source TextReader</param>
+        /// <returns>The deserialized object</returns>
+        /// <exception cref="Exception"></exception>
+        public static T ReadFrom<T>(string xml)
+        {
+            var serializer = new XmlSerializer(typeof(T));
+
+            using var textReader = new StringReader(xml);
+
+            var result = serializer.Deserialize(textReader) ?? throw new Exception("Can't deserialize from the provided source.");
+
+            return (T)result;
+        }
+
+        /// <summary>
         /// Serialize an object to a destination Stream
         /// </summary>
         /// <typeparam name="T">Type of object to be serialized</typeparam>

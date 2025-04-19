@@ -3,6 +3,7 @@ using Marquitos.Salesforce.Commerce.Models.Promotions;
 using Marquitos.Salesforce.Commerce.Models.Promotions.Conditions;
 using Marquitos.Salesforce.Commerce.Models.Promotions.Discounts;
 using Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Tiered;
+using Marquitos.Salesforce.Commerce.Models.Shared;
 
 namespace ImportExportTest
 {
@@ -90,11 +91,19 @@ namespace ImportExportTest
                 MaxApplications = 5
             };
 
-            var promotion = new Promotion { PromotionRule = productPromotionRule };
+            var promotion = new Promotion 
+            {
+                Name = new LocalizedStrings("Test Promotion"),
+                Details = new LocalizedStrings("Test Promotion Description"),
+                PromotionRule = productPromotionRule,
+                PromotionID = "test_promotion",
+            };
 
             var resultStr = XmlImpex.ToXml(promotion);
 
             Console.WriteLine(resultStr);
+
+            var result = XmlImpex.ReadFrom<Promotion>(resultStr);
         }
     }
 }

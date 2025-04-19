@@ -46,19 +46,43 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         [XmlElement("prorate-across-eligible-items-flag"), DefaultValue(false)]
         public bool ProrateAcrossElegibleItemsFlag { get; set; } = false;
 
+        //<xsd:element name="exclusivity" type="PromotionExclusivity" minOccurs="0" maxOccurs="1" />
+        //<xsd:element name="exclusivity-group" type="Generic.String.256" minOccurs="0" maxOccurs="1" />
 
-        /*
-            <xsd:element name="exclusivity" type="PromotionExclusivity" minOccurs="0" maxOccurs="1" />
-            <xsd:element name="exclusivity-group" type="Generic.String.256" minOccurs="0" maxOccurs="1" />
-            <xsd:element name="currency" type="simpleType.Currency" minOccurs="0" maxOccurs="1" nillable="true" />
-            <xsd:element name="name" type="LocalizedString" minOccurs="0" maxOccurs="unbounded" />
-            <xsd:element name="callout-msg" type="LocalizedString" minOccurs="0" maxOccurs="unbounded" />
-            <xsd:element name="details" type="LocalizedString" minOccurs="0" maxOccurs="unbounded" />
-            <xsd:element name="image" type="Generic.String.256" minOccurs="0" maxOccurs="1" />
-            <xsd:element name="tags" type="Tags" minOccurs="0" maxOccurs="1" />
-            <xsd:element name="combinable-promotions" type="CombinablePromotions" minOccurs="0" maxOccurs="1" />
-            <xsd:element name="mutually-exclusive-promotions" type="MutuallyExclusivePromotions" minOccurs="0" maxOccurs="1" />
-         */
+        /// <summary>
+        /// The currency of the promotion
+        /// </summary>
+        /// <remarks>ISO-4217 3-character currency code</remarks>
+        [XmlElement("currency")]
+        public string? Currency { get; set; }
+
+        /// <summary>
+        /// The promotion name in multiple langagues
+        /// </summary>
+        [XmlElement("name")]
+        public LocalizedStrings? Name { get; set; }
+
+        /// <summary>
+        /// The promotion callout message in multiple languages
+        /// </summary>
+        [XmlElement("callout-msg")]
+        public LocalizedStrings? CalloutMessage { get; set; }
+
+        /// <summary>
+        /// The promotion description in multiple languages
+        /// </summary>
+        [XmlElement("details")]
+        public LocalizedStrings? Details { get; set; }
+
+        /// <summary>
+        /// The promotiom image URL
+        /// </summary>
+        [XmlElement("image")]
+        public string? Image { get; set; }
+
+        //<xsd:element name="tags" type="Tags" minOccurs="0" maxOccurs="1" />
+        //<xsd:element name="combinable-promotions" type="CombinablePromotions" minOccurs="0" maxOccurs="1" />
+        //<xsd:element name="mutually-exclusive-promotions" type="MutuallyExclusivePromotions" minOccurs="0" maxOccurs="1" />
 
         /// <summary>
         /// Custom attributes associated with the promotion.
