@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marquitos.Extensions.Salesf
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AAEECEA9-BC1C-48FD-8489-1050E8ED9341}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportExportTest", "test\ImportExportTest\ImportExportTest.csproj", "{28D68FFB-7B2B-46A6-981E-688E40D8B5BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{EACAD2C0-03F0-4A8F-A506-4F59A9980415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EACAD2C0-03F0-4A8F-A506-4F59A9980415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EACAD2C0-03F0-4A8F-A506-4F59A9980415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D68FFB-7B2B-46A6-981E-688E40D8B5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D68FFB-7B2B-46A6-981E-688E40D8B5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D68FFB-7B2B-46A6-981E-688E40D8B5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D68FFB-7B2B-46A6-981E-688E40D8B5BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EACAD2C0-03F0-4A8F-A506-4F59A9980415} = {7CB87AF2-A86A-4793-9E5C-7BC13EFAB657}
+		{28D68FFB-7B2B-46A6-981E-688E40D8B5BA} = {AAEECEA9-BC1C-48FD-8489-1050E8ED9341}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A3F9D554-B563-4A60-AF0E-6C2DF9CEA74A}
