@@ -46,7 +46,11 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         [XmlElement("prorate-across-eligible-items-flag"), DefaultValue(false)]
         public bool ProrateAcrossElegibleItemsFlag { get; set; } = false;
 
-        //<xsd:element name="exclusivity" type="PromotionExclusivity" minOccurs="0" maxOccurs="1" />
+        /// <summary>
+        /// The exclusivity of the promotion.
+        /// </summary>
+        [XmlElement("exclusivity"), DefaultValue(typeof(PromotionExclusivity), "no")]
+        public PromotionExclusivity Exclusivity { get; set; } = PromotionExclusivity.No;
 
         /// <summary>
         /// The exclusivity group of the promotion.
