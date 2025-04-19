@@ -79,7 +79,7 @@ namespace ImportExportTest
                         }
                     }
                 },
-                PromotionDiscount = new TieredProductDiscounts
+                Discounts = new TieredProductDiscounts
                 {
                     ConditionType = Marquitos.Salesforce.Commerce.Enums.ProductPromotionConditionType.ProductQuantity,
                     Discounts = new()

@@ -2,17 +2,14 @@
 using Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Tiered;
 using System.Xml.Serialization;
 
-namespace Marquitos.Salesforce.Commerce.Models.Promotions
+namespace Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts
 {
     /// <summary>
-    /// Represents a product discount
+    /// Represents a product discount in the Salesforce Commerce system.
     /// </summary>
     [XmlInclude(typeof(SimpleProductDiscount))]
     [XmlInclude(typeof(TieredProductDiscounts))]
-    //[XmlInclude(typeof(BogoProductDiscount))]
-    //[XmlInclude(typeof(TieredBogoProductDiscounts))]
-    //[XmlInclude(typeof(TotalPriceDiscounts))]
-    public abstract class PromotionDiscount 
+    public abstract class ProductDiscount
     {
     }
 }

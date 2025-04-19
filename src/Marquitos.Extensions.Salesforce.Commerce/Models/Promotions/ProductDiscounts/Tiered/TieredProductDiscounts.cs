@@ -6,7 +6,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Tiere
     /// <summary>
     /// Represents a collection of tiered product discounts in the Salesforce Commerce system.
     /// </summary>
-    public class TieredProductDiscounts : PromotionDiscount
+    public class TieredProductDiscounts : ProductDiscount
     {
         /// <summary>
         /// List of tiered product discounts.

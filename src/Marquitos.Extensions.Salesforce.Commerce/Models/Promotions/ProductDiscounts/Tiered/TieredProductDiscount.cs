@@ -1,4 +1,5 @@
 ﻿using Marquitos.Salesforce.Commerce.Models.Promotions.Discounts;
+using System.ComponentModel;
 using System.Xml.Serialization;
 
 namespace Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Tiered
@@ -94,7 +95,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Tiere
         /// <summary>
         /// Threshold for the discount.
         /// </summary>
-        [XmlElement("threshold")]
+        [XmlElement("threshold"), DefaultValue(0)]
         public decimal Threshold { get; set; }
 
         /// <summary>

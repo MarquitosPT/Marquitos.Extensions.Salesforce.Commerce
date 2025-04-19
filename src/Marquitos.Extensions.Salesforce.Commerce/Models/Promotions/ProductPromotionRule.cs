@@ -1,4 +1,5 @@
-﻿using Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Simple;
+﻿using Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts;
+using Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Simple;
 using Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Tiered;
 using System.ComponentModel;
 using System.Xml.Serialization;
@@ -43,6 +44,23 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         public ProductCombination? DiscountedProductsCombination { get; set; }
 
         /// <summary>
+        /// Disable global excluded products
+        /// </summary>
+        [XmlElement("disable-global-excluded-products"), DefaultValue(false)]
+        public bool DisableGlobalExcludedProducts { get; set; }
+
+        //    <xsd:element name = "shipping-methods" type="PromotedShippingMethods" minOccurs="0" maxOccurs="1" />
+        //    <xsd:element name = "payment-methods" type="PromotedPaymentMethods" minOccurs="0" maxOccurs="1" />
+
+        /// <summary>
+        /// If set to true, the promotion requires that the qualifying products and discounted products
+        /// are all identical.The promotion may apply up to the application limit for each
+        /// separate product in the order.
+        /// </summary>
+        [XmlElement("identical-products"), DefaultValue(false)]
+        public bool IdenticalProducts { get; set; }
+
+        /// <summary>
         /// Product discount to be applied to the product.
         /// </summary>
         [XmlElement("simple-discount", Type = typeof(SimpleProductDiscount))]
@@ -50,7 +68,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         //[XmlElement("bogo", Type = typeof(BogoProductDiscount))]
         //[XmlElement("bogo-discounts", Type = typeof(TieredBogoProductDiscounts))]
         //[XmlElement("total-discounts", Type = typeof(TotalPriceDiscounts))]
-        public PromotionDiscount? PromotionDiscount { get; set; }
+        public ProductDiscount? Discounts { get; set; }
 
         /// <summary>
         /// The maximum number of times this promotion can be applied to a single product.

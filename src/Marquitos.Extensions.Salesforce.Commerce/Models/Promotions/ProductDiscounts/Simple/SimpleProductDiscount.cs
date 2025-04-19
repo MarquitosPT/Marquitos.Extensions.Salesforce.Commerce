@@ -6,7 +6,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Simpl
     /// <summary>
     /// Represents a simple product discount that is applied to the promotion
     /// </summary>
-    public class SimpleProductDiscount : PromotionDiscount
+    public class SimpleProductDiscount : ProductDiscount
     {
         /// <summary>
         /// Creates a new instance of <see cref="SimpleProductDiscount"/>
