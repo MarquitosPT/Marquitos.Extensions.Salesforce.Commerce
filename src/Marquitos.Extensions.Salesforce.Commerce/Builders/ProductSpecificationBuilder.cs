@@ -18,6 +18,17 @@ namespace Marquitos.Salesforce.Commerce.Builders
         }
 
         /// <summary>
+        /// Creates a new instance of <see cref="ProductSpecificationBuilder"/> with the specified <see cref="ProductSpecification"/>.
+        /// </summary>
+        /// <param name="existent"></param>
+        public ProductSpecificationBuilder(ProductSpecification existent)
+        {
+            ArgumentNullException.ThrowIfNull(existent);
+
+            productSpecification = existent;
+        }
+
+        /// <summary>
         /// Sets the included products for the <see cref="ProductSpecification"/>.
         /// </summary>
         /// <param name="includedProducts"></param>
@@ -195,39 +206,6 @@ namespace Marquitos.Salesforce.Commerce.Builders
         }
 
         /// <summary>
-        /// Implicitly converts a <see cref="ProductSpecificationBuilder"/> to a <see cref="ProductSpecification"/>.
-        /// </summary>
-        /// <param name="builder"></param>
-        public static implicit operator ProductSpecification(ProductSpecificationBuilder builder)
-        {
-            return builder.Build();
-        }
-
-        /// <summary>
-        /// Implicitly converts a <see cref="ProductSpecification"/> to a <see cref="ProductSpecificationBuilder"/>.
-        /// </summary>
-        /// <param name="productSpecification"></param>
-        public static implicit operator ProductSpecificationBuilder(ProductSpecification productSpecification)
-        {
-            var result = new ProductSpecificationBuilder();
-
-            if (productSpecification != null)
-            {
-                if (productSpecification.IncludedProducts != null)
-                {
-                    result.WithIncludedProducts(productSpecification.IncludedProducts);
-                }
-
-                if (productSpecification.ExcludedProducts != null)
-                {
-                    result.WithExcludedProducts(productSpecification.ExcludedProducts);
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
         /// Creates a new instance of <see cref="ProductSpecificationBuilder"/> with default values.
         /// </summary>
         /// <returns></returns>
@@ -273,6 +251,24 @@ namespace Marquitos.Salesforce.Commerce.Builders
             return new ProductSpecificationBuilder()
                 .WithIncludedProducts(includedProducts)
                 .WithExcludedProducts(excludedProducts);
+        }
+
+        /// <summary>
+        /// Implicitly converts a <see cref="ProductSpecificationBuilder"/> to a <see cref="ProductSpecification"/>.
+        /// </summary>
+        /// <param name="builder"></param>
+        public static implicit operator ProductSpecification(ProductSpecificationBuilder builder)
+        {
+            return builder.Build();
+        }
+
+        /// <summary>
+        /// Implicitly converts a <see cref="ProductSpecification"/> to a <see cref="ProductSpecificationBuilder"/>.
+        /// </summary>
+        /// <param name="existent"></param>
+        public static implicit operator ProductSpecificationBuilder(ProductSpecification existent)
+        {
+            return new ProductSpecificationBuilder(existent);
         }
     }
 }

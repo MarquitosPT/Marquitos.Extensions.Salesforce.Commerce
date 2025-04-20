@@ -20,6 +20,17 @@ namespace Marquitos.Salesforce.Commerce.Builders
         }
 
         /// <summary>
+        /// Creates a new instance of <see cref="ConditionGroupBuilder"/> with the specified condition group.
+        /// </summary>
+        /// <param name="existent"></param>
+        public ConditionGroupBuilder(ConditionGroup existent)
+        {
+            ArgumentNullException.ThrowIfNull(existent);
+
+            conditionGroup = existent;
+        }
+
+        /// <summary>
         /// Adds a condition to the condition group.
         /// </summary>
         /// <param name="condition"></param>
@@ -299,24 +310,6 @@ namespace Marquitos.Salesforce.Commerce.Builders
         }
 
         /// <summary>
-        /// Implicitly converts a <see cref="ConditionGroupBuilder"/> to a <see cref="ConditionGroup"/>.
-        /// </summary>
-        /// <param name="builder"></param>
-        public static implicit operator ConditionGroup(ConditionGroupBuilder builder)
-        {
-            return builder.Build();
-        }
-
-        /// <summary>
-        /// Implicitly converts a <see cref="ConditionGroup"/> to a <see cref="ConditionGroupBuilder"/>.
-        /// </summary>
-        /// <param name="conditionGroup"></param>
-        public static implicit operator ConditionGroupBuilder(ConditionGroup conditionGroup)
-        {
-            return Create(conditionGroup);
-        }
-
-        /// <summary>
         /// Creates a new instance of <see cref="ConditionGroupBuilder"/> with an empty condition group.
         /// </summary>
         /// <returns></returns>
@@ -367,6 +360,24 @@ namespace Marquitos.Salesforce.Commerce.Builders
         {
             return new ConditionGroupBuilder()
                 .AddConditions(conditions);
+        }
+
+        /// <summary>
+        /// Implicitly converts a <see cref="ConditionGroupBuilder"/> to a <see cref="ConditionGroup"/>.
+        /// </summary>
+        /// <param name="builder"></param>
+        public static implicit operator ConditionGroup(ConditionGroupBuilder builder)
+        {
+            return builder.Build();
+        }
+
+        /// <summary>
+        /// Implicitly converts a <see cref="ConditionGroup"/> to a <see cref="ConditionGroupBuilder"/>.
+        /// </summary>
+        /// <param name="existent"></param>
+        public static implicit operator ConditionGroupBuilder(ConditionGroup existent)
+        {
+            return new ConditionGroupBuilder(existent);
         }
     }
 }
