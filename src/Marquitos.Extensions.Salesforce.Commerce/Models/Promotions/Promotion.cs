@@ -118,6 +118,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         /// </summary>
         [XmlElement("product-promotion-rule", Type = typeof(ProductPromotionRule))]
         [XmlElement("order-promotion-rule", Type = typeof(OrderPromotionRule))]
+        [XmlElement("shipping-promotion-rule", Type = typeof(ShippingPromotionRule))]
         public PromotionRule PromotionRule { get; set; } = null!;
 
         /// <summary>

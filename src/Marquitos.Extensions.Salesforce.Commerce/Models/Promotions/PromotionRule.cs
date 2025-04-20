@@ -7,6 +7,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
     /// </summary>
     [XmlInclude(typeof(ProductPromotionRule))]
     [XmlInclude(typeof(OrderPromotionRule))]
+    [XmlInclude(typeof(ShippingPromotionRule))]
     public abstract class PromotionRule
     {
     }
