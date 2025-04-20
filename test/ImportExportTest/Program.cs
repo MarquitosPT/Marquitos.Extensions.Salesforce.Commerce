@@ -1,5 +1,6 @@
 ﻿using Marquitos.Salesforce.Commerce.Builders;
 using Marquitos.Salesforce.Commerce.Enums.Comparators;
+using Marquitos.Salesforce.Commerce.Enums.Conditions;
 using Marquitos.Salesforce.Commerce.Helpers;
 using Marquitos.Salesforce.Commerce.Models.Promotions;
 using Marquitos.Salesforce.Commerce.Models.Promotions.Conditions;
@@ -35,14 +36,9 @@ namespace ImportExportTest
                         .AddExcludedProducts(
                             ConditionGroupBuilder.Create()
                                 .AddBrandCondition(["brand5", "brand6"])),
-                Discounts = new TieredProductDiscounts
-                {
-                    ConditionType = Marquitos.Salesforce.Commerce.Enums.Conditions.ProductPromotionConditionType.ProductQuantity,
-                    Discounts = new()
-                    {
-                        new TieredProductDiscount(new PriceBookPriceDiscount("teste")),
-                    } 
-                },
+                Discounts = 
+                    ProductDiscountBuilder.Create()
+                        .WithTieredPriceBookPriceDiscounts(new PriceBookPriceDiscount("teste"), 0, ProductPromotionConditionType.ProductQuantity),
                 MaxApplications = 5
             };
 

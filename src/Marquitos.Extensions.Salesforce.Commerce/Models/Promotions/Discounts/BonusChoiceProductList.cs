@@ -11,9 +11,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions.Discounts
         /// Creates a new instance of <see cref="BonusChoiceProductList"/> with an empty list of bonus products.
         /// </summary>
         public BonusChoiceProductList()
-        {
-            
-        }
+        { }
 
         /// <summary>
         /// Creates a new instance of <see cref="BonusChoiceProductList"/> with the specified bonus products.

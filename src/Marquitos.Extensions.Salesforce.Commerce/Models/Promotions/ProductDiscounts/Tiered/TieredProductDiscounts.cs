@@ -9,6 +9,43 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions.ProductDiscounts.Tiere
     public class TieredProductDiscounts : ProductDiscount
     {
         /// <summary>
+        /// Creates a new instance of <see cref="TieredProductDiscounts"/>
+        /// </summary>
+        public TieredProductDiscounts()
+        { }
+
+        /// <summary>
+        /// Creates a new instance of <see cref="TieredProductDiscounts"/>
+        /// </summary>
+        /// <param name="discounts"></param>
+        /// <param name="conditionType"></param>
+        public TieredProductDiscounts(IEnumerable<TieredProductDiscount> discounts, ProductPromotionConditionType conditionType = ProductPromotionConditionType.ProductQuantity)
+        {
+            Discounts = new(discounts);
+            ConditionType = conditionType;
+        }
+
+        /// <summary>
+        /// Creates a new instance of <see cref="TieredProductDiscounts"/>
+        /// </summary>
+        /// <param name="discount"></param>
+        /// <param name="conditionType"></param>
+        public TieredProductDiscounts(TieredProductDiscount discount, ProductPromotionConditionType conditionType = ProductPromotionConditionType.ProductQuantity)
+        {
+            Discounts = new() { discount };
+            ConditionType = conditionType;
+        }
+
+        /// <summary>
+        /// Creates a new instance of <see cref="TieredProductDiscounts"/>
+        /// </summary>
+        /// <param name="conditionType"></param>
+        public TieredProductDiscounts(ProductPromotionConditionType conditionType = ProductPromotionConditionType.ProductQuantity)
+        {
+            ConditionType = conditionType;
+        }
+
+        /// <summary>
         /// List of tiered product discounts.
         /// </summary>
         [XmlElement("discount")]
