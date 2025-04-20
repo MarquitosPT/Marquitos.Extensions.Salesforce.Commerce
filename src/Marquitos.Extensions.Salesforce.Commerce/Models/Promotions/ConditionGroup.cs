@@ -49,7 +49,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         [XmlElement("attribute-condition", Type = typeof(AttributeCondition))]
         [XmlElement("brand-condition", Type = typeof(BrandCondition))]
         [XmlElement("category-condition", Type = typeof(CategoryCondition))]
-        //[XmlElement("price-condition", Type = typeof(PriceCondition))]
+        [XmlElement("price-condition", Type = typeof(PriceCondition))]
         [XmlElement("product-id-condition", Type = typeof(ProductCondition))]
         public List<Condition> Conditions { get; set; } 
     }

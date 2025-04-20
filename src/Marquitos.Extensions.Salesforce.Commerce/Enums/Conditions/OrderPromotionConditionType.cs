@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace Marquitos.Salesforce.Commerce.Enums
+namespace Marquitos.Salesforce.Commerce.Enums.Conditions
 {
     /// <summary>
     /// Order promotion condition type

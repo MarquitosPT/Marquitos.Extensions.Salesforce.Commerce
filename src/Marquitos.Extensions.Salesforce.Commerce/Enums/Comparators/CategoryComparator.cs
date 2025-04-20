@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace Marquitos.Salesforce.Commerce.Enums
+namespace Marquitos.Salesforce.Commerce.Enums.Comparators
 {
     /// <summary>
     /// Enumeration for category comparators

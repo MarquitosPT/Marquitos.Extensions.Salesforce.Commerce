@@ -1,4 +1,4 @@
-﻿using Marquitos.Salesforce.Commerce.Enums;
+﻿using Marquitos.Salesforce.Commerce.Enums.Comparators;
 using System.Xml.Serialization;
 
 namespace Marquitos.Salesforce.Commerce.Models.Promotions.Conditions

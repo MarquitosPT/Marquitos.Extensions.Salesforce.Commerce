@@ -9,6 +9,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
     [XmlInclude(typeof(AttributeCondition))]
     [XmlInclude(typeof(BrandCondition))]
     [XmlInclude(typeof(CategoryCondition))]
+    [XmlInclude(typeof(PriceCondition))]
     [XmlInclude(typeof(ProductCondition))]
     public abstract class Condition<TOperator>: Condition where TOperator : Enum
     {

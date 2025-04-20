@@ -82,7 +82,7 @@ namespace ImportExportTest
                 },
                 Discounts = new TieredProductDiscounts
                 {
-                    ConditionType = Marquitos.Salesforce.Commerce.Enums.ProductPromotionConditionType.ProductQuantity,
+                    ConditionType = Marquitos.Salesforce.Commerce.Enums.Conditions.ProductPromotionConditionType.ProductQuantity,
                     Discounts = new()
                     {
                         new TieredProductDiscount(new PriceBookPriceDiscount("teste")),

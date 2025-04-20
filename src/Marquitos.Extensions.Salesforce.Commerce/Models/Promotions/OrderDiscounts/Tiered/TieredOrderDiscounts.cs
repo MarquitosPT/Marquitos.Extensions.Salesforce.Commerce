@@ -1,4 +1,4 @@
-﻿using Marquitos.Salesforce.Commerce.Enums;
+﻿using Marquitos.Salesforce.Commerce.Enums.Conditions;
 using System.Xml.Serialization;
 
 namespace Marquitos.Salesforce.Commerce.Models.Promotions.OrderDiscounts.Tiered
