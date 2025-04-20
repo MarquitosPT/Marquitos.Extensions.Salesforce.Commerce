@@ -88,7 +88,7 @@ namespace Marquitos.Salesforce.Commerce.Builders
         /// </summary>
         /// <param name="includedProduct"></param>
         /// <returns></returns>
-        public ProductSpecificationBuilder AddIncludedProduct(ConditionGroup includedProduct)
+        public ProductSpecificationBuilder AddIncludedProducts(ConditionGroup includedProduct)
         {
             if (productSpecification.IncludedProducts == null)
             {
@@ -103,7 +103,7 @@ namespace Marquitos.Salesforce.Commerce.Builders
         /// </summary>
         /// <param name="excludedProduct"></param>
         /// <returns></returns>
-        public ProductSpecificationBuilder AddExcludedProduct(ConditionGroup excludedProduct)
+        public ProductSpecificationBuilder AddExcludedProducts(ConditionGroup excludedProduct)
         {
             if (productSpecification.ExcludedProducts == null)
             {
