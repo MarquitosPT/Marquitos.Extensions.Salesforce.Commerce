@@ -21,7 +21,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         /// <param name="promotionSettings"></param>
         /// <param name="promotions"></param>
         /// <param name="promotionCampaignAssignments"></param>
-        public PromotionsImpex(List<Campaign> campaigns, List<PromotionSettings> promotionSettings, List<Promotion> promotions, List<PromotionCampaignAssignment> promotionCampaignAssignments)
+        public PromotionsImpex(List<Campaign> campaigns, PromotionSettings? promotionSettings, List<Promotion> promotions, List<PromotionCampaignAssignment> promotionCampaignAssignments)
         {
             Campaigns = campaigns;
             PromotionSettings = promotionSettings;
@@ -39,7 +39,7 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         /// Global promotion settings for the promotions.
         /// </summary>
         [XmlElement("global-promotion-settings")]
-        public List<PromotionSettings> PromotionSettings { get; set; } = new();
+        public PromotionSettings? PromotionSettings { get; set; }
 
         /// <summary>
         /// List of promotions.
