@@ -89,9 +89,23 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         [XmlElement("image")]
         public string? Image { get; set; }
 
-        //<xsd:element name="tags" type="Tags" minOccurs="0" maxOccurs="1" />
-        //<xsd:element name="combinable-promotions" type="CombinablePromotions" minOccurs="0" maxOccurs="1" />
-        //<xsd:element name="mutually-exclusive-promotions" type="MutuallyExclusivePromotions" minOccurs="0" maxOccurs="1" />
+        /// <summary>
+        /// Tags associated with the promotion.
+        /// </summary>
+        [XmlElement("tags")]
+        public Tags? Tags { get; set; }
+
+        /// <summary>
+        /// List of promotions whether the promotion is combinable.
+        /// </summary>
+        [XmlElement("combinable-promotions")]
+        public CombinablePromotions? CombinablePromotions { get; set; }
+
+        /// <summary>
+        /// List of promotions that are mutually exclusive with this promotion.
+        /// </summary>
+        [XmlElement("mutually-exclusive-promotions")]
+        public MutuallyExclusivePromotions? MutuallyExclusivePromotions { get; set; }
 
         /// <summary>
         /// Custom attributes associated with the promotion.
