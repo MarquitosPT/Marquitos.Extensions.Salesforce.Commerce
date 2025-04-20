@@ -49,8 +49,17 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         [XmlElement("disable-global-excluded-products"), DefaultValue(false)]
         public bool DisableGlobalExcludedProducts { get; set; }
 
-        //    <xsd:element name = "shipping-methods" type="PromotedShippingMethods" minOccurs="0" maxOccurs="1" />
-        //    <xsd:element name = "payment-methods" type="PromotedPaymentMethods" minOccurs="0" maxOccurs="1" />
+        /// <summary>
+        /// Shipping methods to be used for the promotion.
+        /// </summary>
+        [XmlElement("shipping-methods")]
+        public PromotedShippingMethods? ShippingMethods { get; set; }
+
+        /// <summary>
+        /// Payment methods to be used for the promotion.
+        /// </summary>
+        [XmlElement("payment-methods")]
+        public PromotedPaymentMethods? PaymentMethods { get; set; }
 
         /// <summary>
         /// If set to true, the promotion requires that the qualifying products and discounted products

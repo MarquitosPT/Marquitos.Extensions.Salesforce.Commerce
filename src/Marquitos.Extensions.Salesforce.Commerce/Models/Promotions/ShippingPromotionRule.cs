@@ -24,8 +24,17 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         [XmlElement("qualifying-products-combination")]
         public ProductCombination? QualifyingProductsCombination { get; set; }
 
-        //    <xsd:element name = "shipping-methods" type="PromotedShippingMethods" minOccurs="0" maxOccurs="1" />
-        //    <xsd:element name = "payment-methods" type="PromotedPaymentMethods" minOccurs="0" maxOccurs="1" />
+        /// <summary>
+        /// Shipping methods to be used for the promotion.
+        /// </summary>
+        [XmlElement("shipping-methods")]
+        public PromotedShippingMethods? ShippingMethods { get; set; }
+
+        /// <summary>
+        /// Payment methods to be used for the promotion.
+        /// </summary>
+        [XmlElement("payment-methods")]
+        public PromotedPaymentMethods? PaymentMethods { get; set; }
 
         /// <summary>
         /// Flag that controls behavior for shipping promotions with qualifying products.

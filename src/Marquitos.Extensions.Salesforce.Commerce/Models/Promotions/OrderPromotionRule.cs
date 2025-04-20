@@ -29,7 +29,11 @@ namespace Marquitos.Salesforce.Commerce.Models.Promotions
         [XmlElement("excluded-products")]
         public ProductSpecification? ExcludedProducts { get; set; }
 
-        // <xsd:element name="payment-methods" type="PromotedPaymentMethods" minOccurs="0" maxOccurs="1" />
+        /// <summary>
+        /// Payment methods to be used for the promotion.
+        /// </summary>
+        [XmlElement("payment-methods")]
+        public PromotedPaymentMethods? PaymentMethods { get; set; }
 
         /// <summary>
         /// Disable global excluded products
